@@ -28,3 +28,9 @@ $app->group(['prefix' => 'deputados'], function () use ($app) {
 $app->group(['prefix' => 'tiposDespesa'], function () use ($app) {
     $app->get('', 'TipoDespesaController@list');
 });
+
+$app->group(['prefix' => 'fornecedores'], function () use ($app) {
+    $app->get('', 'FornecedorController@list');
+    $app->get('/{id}', 'FornecedorController@get');
+    $app->get('/byCpfCnpj/{cpfCnpj}', 'FornecedorController@findByCpfCnpj');
+});
