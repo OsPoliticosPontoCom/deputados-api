@@ -22,7 +22,7 @@ $app->get('/seed/despesas', 'SeedController@seedDespesas');
 $app->group(['prefix' => 'deputados'], function () use ($app) {
     $app->get('', 'DeputadoController@list');
     $app->get('/{id}', 'DeputadoController@get');
-    $app->get('/findByCodigoApi/{codigo}', 'DeputadoController@getByCodigoApi');
+    $app->get('/byCodigoApi/{codigo}', 'DeputadoController@getByCodigoApi');
 });
 
 $app->group(['prefix' => 'tiposDespesa'], function () use ($app) {
