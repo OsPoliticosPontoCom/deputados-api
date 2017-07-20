@@ -24,3 +24,7 @@ $app->group(['prefix' => 'deputados'], function () use ($app) {
     $app->get('/{id}', 'DeputadoController@get');
     $app->get('/findByCodigoApi/{codigo}', 'DeputadoController@getByCodigoApi');
 });
+
+$app->group(['prefix' => 'tiposDespesa'], function () use ($app) {
+    $app->get('', 'TipoDespesaController@list');
+});
