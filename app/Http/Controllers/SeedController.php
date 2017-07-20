@@ -78,7 +78,7 @@ class SeedController extends Controller
 
         }
 
-        return response()->json("{\"status\": true}");
+        return response()->json(["status" => "ok"]);
 
     }
 
@@ -194,6 +194,8 @@ class SeedController extends Controller
             }
 
         }
+
+        return response()->json(["status" => "ok"]);
 
     }
 
