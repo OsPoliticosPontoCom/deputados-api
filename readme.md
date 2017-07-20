@@ -3,8 +3,9 @@
 A API é baseada no micro-framework Lumen e estrutura de banco de dados pre-modelada para MySQL com arquivo compatível para leitura no MySQL Workbench.
 
 ## Como Executar
+1) Execute o script SQL para criar o banco de dados e tabelas que serão utilizados pela API. Você pode encontrar o Script em doc/create_database_tables.sql
 
-Renomeie o arquivo .env.example para .env e adicione suas configurações de banco de dados
+2) Renomeie o arquivo .env.example para .env e adicione suas configurações de banco de dados
 
     APP_ENV=local
     APP_DEBUG=true
@@ -21,7 +22,7 @@ Renomeie o arquivo .env.example para .env e adicione suas configurações de ban
     CACHE_DRIVER=memcached
     QUEUE_DRIVER=sync
 
-Abra o terminal na raiz do projeto e execute os seguintes comandos
+3) Abra o terminal na raiz do projeto e execute os seguintes comandos
 
     # rodar o projeto
     php -S localhost:8000 -t public
