@@ -19,4 +19,14 @@ class DeputadoController extends Controller
         return response()->json($deputados);
     }
 
+    public function get($id) {
+        $deputado = Deputado::where('id', $id)->with('ultimoStatus.gabinete')->get();
+        return response()->json($deputado);
+    }
+
+    public function getByCodigoApi($codigo) {
+        $deputado = Deputado::where('codigo_api', $codigo)->with('ultimoStatus.gabinete')->get();
+        return response()->json($deputado);
+    }
+
 }
